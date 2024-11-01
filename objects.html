@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects</title>
+</head>
+<body>
+    <script>
+       /* const product = {
+        name: 'socks',
+        price: 1090
+       };
+
+       console.log(product);
+       console.log(product.name);
+       console.log(product.price);
+
+       product.name = 'cortton socks';
+       console.log(product);
+
+       product.newProperty = true;
+       console.log(product);
+       
+       delete product.newProperty;
+       console.log(product);
+       */
+
+    
+       /* const product2 = {
+        name: 'shirt',
+        'delivery-time': '1 day',
+        rating: { // nestes object - object inside other object
+            stars: 4.5,
+            count: 87
+        },
+        fun: function function1() { // Function inside object = Method
+            console.log('function inside object');
+        }
+       };
+
+       console.log(product2);
+       console.log(product2.name); // Dot notation
+       console.log(product2['name']); // Bracked notation: lets us use properties that don't work with dot notation ex: product2.delivery-time
+       console.log(product2['delivery-time']);
+
+       console.log(product2.rating.count);
+       product2.fun();
+
+       console.log(typeof console.log); // Method, ex: Math.ramdom(), this is a object + function
+
+       // JSON: similar to JS object, but with less features. We use to store data.
+
+       // convert JS Object into JSON:
+       console.log(JSON.stringify(product2));
+       
+       // convert JSON into JS Object (build-in object):
+       const jsonstring = JSON.stringify(product2);
+       console.log(JSON.parse(jsonstring));
+        */
+
+        // Properties:
+        console.log('hello'.length);
+        console.log('hello'.toUpperCase());
+
+        // Objects are references
+        const object1 = {
+            message: 'hello'
+        };
+        const object2 = object1; // copy by reference;
+
+        object1.message = 'Good job!';
+        console.log(object1);
+        console.log(object2);
+
+        // We can't compare objects directly
+        const object3 = {
+            message: 'Good job!'
+        };
+        console.log(object3 === object1); // Compare the references, not the values inside.
+        console.log(object2 === object1); // Comparing the references, not the values inside.  Same reference.
+    
+        const object4 = {
+            message: 'Good job!',
+            price: 799
+        };
+        // const message = object4.message;
+        const { message, price } = object4; // Destructuring
+        console.log(message);
+        console.log(price);
+
+        const object5 = {
+            // message: message 
+            message, // Shorthand property
+            // method: function function1() {
+            //    console.log('method');
+            //}
+            method() { // Shorthand method
+                console.log('method');
+            }
+        }
+        console.log(object5);
+    </script>
+</body>
+</html>
